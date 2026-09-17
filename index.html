@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bravish Energy | Logistics & Last-Mile Delivery Bengaluru</title>
+<meta name="description" content="Bravish Energy provides B2C last-mile delivery, B2B distribution, warehousing, fulfilment and reverse logistics solutions in Bengaluru, Karnataka.">
+<style>
+:root{
+  --navy:#06284f;
+  --navy2:#0b3768;
+  --orange:#ff7900;
+  --light:#f5f8fc;
+  --text:#17324d;
+  --muted:#60758a;
+  --white:#fff;
+  --border:#e2eaf2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(6,40,79,.97);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{height:62px;width:auto;object-fit:contain}
+nav{display:flex;align-items:center;gap:28px;color:#fff;font-weight:600;font-size:14px}
+nav a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:30px;font-weight:700;border:2px solid transparent;transition:.2s}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-outline{border-color:#fff;color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.menu{display:none;color:#fff;font-size:28px;cursor:pointer}
+
+.hero{min-height:720px;padding-top:82px;display:flex;align-items:center;position:relative;overflow:hidden;background:
+linear-gradient(90deg,rgba(4,27,55,.94) 0%,rgba(4,27,55,.78) 42%,rgba(4,27,55,.18) 75%),
+url('https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=2200&q=85') center/cover;}
+.hero-content{color:#fff;max-width:650px;padding:90px 0}
+.eyebrow{font-size:14px;letter-spacing:4px;font-weight:800;margin-bottom:16px}
+.hero h1{font-size:clamp(44px,6vw,76px);line-height:1.03;margin-bottom:24px}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:19px;max-width:610px;color:#edf4fb;margin-bottom:32px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+
+section{padding:90px 0}
+.section-label{text-align:center;color:var(--orange);font-size:13px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+.section-title{text-align:center;color:var(--navy);font-size:clamp(30px,4vw,46px);line-height:1.15;margin:10px 0 16px}
+.section-subtitle{text-align:center;max-width:720px;margin:0 auto 48px;color:var(--muted)}
+
+.intro{background:#fff}
+.intro-box{max-width:900px;margin:auto;text-align:center}
+.intro-box h2{font-size:38px;color:var(--navy);margin-bottom:18px}
+.intro-box p{font-size:18px;color:var(--muted)}
+
+.services{background:var(--light)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:30px;transition:.25s;box-shadow:0 8px 25px rgba(10,40,70,.05)}
+.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(10,40,70,.1)}
+.icon{font-size:42px;margin-bottom:14px}
+.card h3{color:var(--navy);font-size:21px;margin-bottom:9px}
+.card p{color:var(--muted)}
+
+.dark-section{background:var(--navy);color:#fff}
+.dark-section .section-title{color:#fff}
+.dark-section .section-subtitle{color:#d9e5f0}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}
+.feature{text-align:center;padding:24px;border-left:1px solid rgba(255,255,255,.14)}
+.feature .icon{font-size:32px}
+.feature h3{margin-bottom:7px}
+.feature p{color:#cbd9e6;font-size:14px}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}
+.step{position:relative;padding:28px;border:1px solid var(--border);border-radius:16px}
+.step-number{font-size:13px;font-weight:900;color:var(--orange);letter-spacing:2px}
+.step h3{margin:10px 0 7px;color:var(--navy)}
+.step p{color:var(--muted);font-size:15px}
+
+.cta{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;text-align:center}
+.cta h2{font-size:42px;line-height:1.15;margin-bottom:15px}
+.cta p{color:#dce8f2;max-width:650px;margin:0 auto 28px}
+
+.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-layout h2{color:var(--navy);font-size:42px;line-height:1.15;margin-bottom:18px}
+.about-layout p{color:var(--muted);margin-bottom:15px}
+.checks{display:grid;gap:12px;margin-top:22px}
+.check{font-weight:700}.check::before{content:"✓";color:var(--orange);font-weight:900;margin-right:10px}
+
+.contact{background:var(--light)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}
+.contact-info,.form{background:#fff;border:1px solid var(--border);border-radius:18px;padding:34px}
+.contact-info h3,.form h3{color:var(--navy);font-size:26px;margin-bottom:18px}
+.contact-item{margin:18px 0}
+.contact-item strong{display:block;color:var(--navy)}
+.contact-item span{color:var(--muted)}
+form{display:grid;gap:14px}
+input,select,textarea{width:100%;padding:14px 15px;border:1px solid #d5e0ea;border-radius:10px;font:inherit;color:var(--text);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--orange)}
+textarea{min-height:140px;resize:vertical}
+label{font-weight:700;font-size:14px;color:var(--navy)}
+
+footer{background:#041d39;color:#cbd9e6;padding:55px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:45px}
+footer .logo{margin-bottom:18px}
+footer h3{color:#fff;margin-bottom:14px}
+footer p{max-width:430px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:#fff}
+.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:13px;display:flex;justify-content:space-between;gap:15px}
+
+.page{padding-top:82px}
+.page-hero{background:var(--navy);color:#fff;padding:90px 0;text-align:center}
+.page-hero h1{font-size:52px;line-height:1.1;margin-bottom:12px}
+.page-hero p{max-width:720px;margin:auto;color:#dce8f2;font-size:18px}
+
+.service-detail{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;margin-bottom:70px}
+.service-detail:nth-child(even){direction:rtl}
+.service-detail:nth-child(even)>*{direction:ltr}
+.service-detail h2{color:var(--navy);font-size:36px;line-height:1.15;margin-bottom:14px}
+.service-detail p,.service-detail li{color:var(--muted)}
+.service-detail ul{margin:18px 0 0 20px}
+.service-visual{min-height:270px;border-radius:20px;background:linear-gradient(135deg,#edf4fa,#fff);display:flex;align-items:center;justify-content:center;font-size:100px;border:1px solid var(--border)}
+
+@media(max-width:900px){
+  nav{display:none;position:absolute;top:82px;left:0;right:0;background:var(--navy);padding:20px;flex-direction:column;align-items:flex-start}
+  nav.open{display:flex}
+  .menu{display:block}
+  .nav>.btn{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .about-layout,.contact-grid,.service-detail{grid-template-columns:1fr}
+  .service-detail:nth-child(even){direction:ltr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .logo{height:52px}
+  .hero{min-height:650px}
+  .hero-content{padding:65px 0}
+  .hero h1{font-size:45px}
+  .hero p{font-size:17px}
+  section{padding:65px 0}
+  .grid,.features,.steps,.footer-grid{grid-template-columns:1fr}
+  .copyright{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home"><img class="logo" src="be-logistics-logo.png" alt="BE Logistics - Bravish Energy"></a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Logistics Services</a>
+      <a href="#operations">Operations</a>
+      <a href="#partner">Partner With Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#partner">Partner With Us →</a>
+    <div class="menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</div>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">BRAVISH ENERGY</div>
+      <h1>Powering Reliable<br><span>Last-Mile Delivery</span></h1>
+      <p>Bravish Energy provides scalable last-mile delivery, B2B distribution, warehousing and fulfilment solutions for e-commerce companies, businesses and logistics networks.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#services">Our Services →</a>
+        <a class="btn btn-outline" href="#partner">Partner With Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container intro-box">
+    <div class="section-label">Who We Are</div>
+    <h2>Logistics That Keeps Business Moving</h2>
+    <p>At Bravish Energy, we focus on building dependable logistics operations that connect businesses, distribution networks and customers. From shipment sorting and local distribution to final-mile delivery and reverse logistics, our approach is built around operational discipline, reliability and scalable infrastructure.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Comprehensive Logistics Solutions</h2>
+    <p class="section-subtitle">Flexible logistics support designed around the operational requirements of modern businesses.</p>
+    <div class="grid">
+      <article class="card"><div class="icon">🛵</div><h3>B2C Last-Mile Delivery</h3><p>Fast, reliable and technology-enabled delivery from local hubs to customers.</p></article>
+      <article class="card"><div class="icon">📦</div><h3>B2B Distribution</h3><p>Efficient movement of goods between businesses, distributors, retailers and operational locations.</p></article>
+      <article class="card"><div class="icon">🏢</div><h3>Warehousing & Fulfilment</h3><p>Storage, shipment sorting, order processing and dispatch support.</p></article>
+      <article class="card"><div class="icon">🔄</div><h3>Reverse Logistics & RTO</h3><p>Structured handling of returns, RTO shipments and reverse supply-chain movements.</p></article>
+      <article class="card"><div class="icon">📍</div><h3>Shipment Sorting & Dispatch</h3><p>Accurate shipment segregation, route allocation and timely dispatch operations.</p></article>
+      <article class="card"><div class="icon">🚚</div><h3>Delivery Fleet Management</h3><p>Delivery personnel, vehicle coordination, route planning and operational management.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div>
+        <div class="section-label" style="text-align:left">Why Bravish Energy</div>
+        <h2 class="section-title" style="text-align:left">Built for Reliable Operations</h2>
+        <p>We combine operational discipline, scalable infrastructure and a customer-focused approach to provide dependable logistics solutions.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="icon">✓</div><h3>Reliable</h3><p>Focused on disciplined operations and consistent service.</p></div>
+        <div class="feature"><div class="icon">↗</div><h3>Scalable</h3><p>Capacity can expand with shipment volumes.</p></div>
+        <div class="feature"><div class="icon">⌖</div><h3>Local</h3><p>Bengaluru-based logistics focus.</p></div>
+        <div class="feature"><div class="icon">♧</div><h3>Customer Focused</h3><p>Long-term partnerships over short-term transactions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="operations">
+  <div class="container">
+    <div class="section-label">Our Operations</div>
+    <h2 class="section-title">From Hub to Customer</h2>
+    <p class="section-subtitle">A structured operating approach from shipment receipt through delivery and returns.</p>
+    <div class="steps">
+      <div class="step"><div class="step-number">01</div><h3>Shipment Received</h3><p>Shipments are received at the designated operational facility.</p></div>
+      <div class="step"><div class="step-number">02</div><h3>Sorting & Segregation</h3><p>Shipments are organized according to delivery zones and routes.</p></div>
+      <div class="step"><div class="step-number">03</div><h3>Route Planning</h3><p>Routes are planned to improve operational efficiency and coverage.</p></div>
+      <div class="step"><div class="step-number">04</div><h3>Rider Allocation</h3><p>Shipments are allocated to delivery personnel according to routes.</p></div>
+      <div class="step"><div class="step-number">05</div><h3>Last-Mile Delivery</h3><p>Delivery personnel complete the final movement to the customer.</p></div>
+      <div class="step"><div class="step-number">06</div><h3>Delivery Confirmation</h3><p>Delivery outcomes are recorded through the applicable system.</p></div>
+      <div class="step"><div class="step-number">07</div><h3>Returns & RTO</h3><p>Undelivered and returned shipments enter the reverse workflow.</p></div>
+      <div class="step"><div class="step-number">08</div><h3>Reporting</h3><p>Operational performance can be tracked against agreed requirements.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="partner">
+  <div class="container" style="text-align:center">
+    <div class="section-label">Partnerships</div>
+    <h2 class="section-title">Let's Build a Stronger Supply Chain Together</h2>
+    <p class="section-subtitle">Bravish Energy is open to partnerships with e-commerce companies, logistics networks, retailers, D2C brands, manufacturers and businesses requiring delivery, distribution or fulfilment support.</p>
+    <a class="btn btn-primary" href="#contact">Start a Partnership Discussion →</a>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-subtitle">Tell us about your logistics requirement and our team can discuss the appropriate operating model.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Bravish Energy</h3>
+        <div class="contact-item"><strong>Location</strong><span>Bengaluru, Karnataka, India</span></div>
+        <div class="contact-item"><strong>Phone</strong><span>+91 74119 12204</span></div>
+        <div class="contact-item"><strong>Email</strong><span>bravishenergy@gmail.com</span></div>
+        <div class="contact-item"><strong>Website</strong><span>bravishenergy.in</span></div>
+      </div>
+      <div class="form">
+        <h3>Send an Enquiry</h3>
+        <form action="mailto:bravishenergy@gmail.com" method="post" enctype="text/plain">
+          <label>Name *</label><input name="Name" required>
+          <label>Company Name</label><input name="Company">
+          <label>Email *</label><input type="email" name="Email" required>
+          <label>Phone Number *</label><input name="Phone" required>
+          <label>Service Required</label>
+          <select name="Service">
+            <option>B2C Last-Mile Delivery</option>
+            <option>B2B Distribution</option>
+            <option>Warehousing</option>
+            <option>Fulfilment</option>
+            <option>Reverse Logistics</option>
+            <option>RTO Handling</option>
+            <option>Shipment Sorting & Dispatch</option>
+            <option>Other</option>
+          </select>
+          <label>Location / PIN Code</label><input name="Location">
+          <label>Expected Shipment Volume</label><input name="Shipment Volume">
+          <label>Message *</label><textarea name="Message" required></textarea>
+          <button class="btn btn-primary" type="submit">Submit Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="logo" src="be-logistics-logo.png" alt="BE Logistics">
+        <p>Reliable logistics solutions for a connected India.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#services">B2C Last-Mile Delivery</a></li>
+          <li><a href="#services">B2B Distribution</a></li>
+          <li><a href="#services">Warehousing & Fulfilment</a></li>
+          <li><a href="#services">Reverse Logistics</a></li>
+          <li><a href="#services">Fleet Management</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#operations">Operations</a></li>
+          <li><a href="#partner">Partner With Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Bravish Energy. All Rights Reserved.</span>
+      <span>Bengaluru, Karnataka, India</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('nav a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open'));
+});
+</script>
+</body>
+</html>
